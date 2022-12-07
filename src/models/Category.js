@@ -7,7 +7,7 @@ const categorySchema = new Schema({
     type: Schema.Types.String,
     required: true,
   },
-  name: {
+  id: {
     type: Schema.Types.Number,
     required: true,
   },
