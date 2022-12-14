@@ -1,6 +1,7 @@
 import Express from "express";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import cors from "cors";
 
 import connectToMongo from "./config/mongo.js";
 import feedbackRouter from "./routes/Feedback-router.js";
@@ -12,6 +13,7 @@ dotenv.config();
 connectToMongo();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use("/api", feedbackRouter);
 app.use("/api", categoryRouter);
