@@ -3,7 +3,7 @@ import Category from "../models/Category.js";
 
 const checkCategory = (document) => (value, helpers) => {
   if (!document) {
-    return helpers.messages("There is no category with this id");
+    return helpers.messages("there is no category with this id");
   }
 
   return value;
