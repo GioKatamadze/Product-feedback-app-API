@@ -25,7 +25,7 @@ const addFeedbackSchema = async (data) => {
     category_id: Joi.number()
       .custom(checkCategory(category))
       .required()
-      .messages({
+      .message({
         "number.base": "category_id should be a string",
         "any.required": "category_id is required",
       }),
