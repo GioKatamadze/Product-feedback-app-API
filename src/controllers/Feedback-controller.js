@@ -35,10 +35,10 @@ export const addFeedback = async (req, res) => {
   await Feedback.create({
     title,
     description,
-    category_id: 1,
+    category_id,
     upvotes: 0,
     status_id: 1,
-    id: 1,
+    id,
   });
 
   return res.status(201).json({ message: "Feedback created successfully" });
