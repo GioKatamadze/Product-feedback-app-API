@@ -10,7 +10,7 @@ const checkCategory = (document) => (value, helpers) => {
 };
 
 const addFeedbackSchema = async (data) => {
-  const category = await Category.findOne({ id: data.id });
+  const category = await Category.findOne({ id: data.category_id });
   return Joi.object({
     title: Joi.string().min(3).required().messages({
       "string.base": "Title should be a string",
@@ -25,7 +25,7 @@ const addFeedbackSchema = async (data) => {
     category_id: Joi.number()
       .custom(checkCategory(category))
       .required()
-      .message({
+      .messages({
         "number.base": "category_id should be a string",
         "any.required": "category_id is required",
       }),
