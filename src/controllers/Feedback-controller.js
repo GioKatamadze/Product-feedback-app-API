@@ -24,7 +24,7 @@ export const addFeedback = async (req, res) => {
   await Feedback.create({
     title,
     description,
-    category_id,
+    category_id: 1,
     upvotes: 0,
     status_id: 1,
     id: 1,
