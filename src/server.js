@@ -11,12 +11,12 @@ import categoryRouter from "./routes/Category-router.js";
 const app = Express();
 dotenv.config();
 connectToMongo();
-
-app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/api", cors(), feedbackRouter);
-app.use("/api", cors(), categoryRouter);
+app.use(bodyParser.json());
+
+app.use("/api", feedbackRouter);
+app.use("/api", categoryRouter);
 app.use("/", ...swaggerMiddleware());
 
 app.listen(process.env.PORT || 3000);
