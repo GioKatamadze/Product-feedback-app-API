@@ -27,6 +27,10 @@ const feedbackSchema = new Schema({
     type: Schema.Types.Number,
     required: true,
   },
+  commentAmount: {
+    type: Schema.Types.Number,
+    required: true,
+  },
 });
 
 const Feedback = mongoose.model("Feedback", feedbackSchema);
