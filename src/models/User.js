@@ -2,17 +2,17 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const commentSchema = new Schema({
-  content: {
+const userSchema = new Schema({
+  avatar: {
     type: Schema.Types.String,
     required: true,
   },
-  feedbackId: {
-    type: Schema.Types.Number,
+  name: {
+    type: Schema.Types.String,
     required: true,
   },
-  userId: {
-    type: Schema.Types.Number,
+  username: {
+    type: Schema.Types.String,
     required: true,
   },
   id: {
@@ -21,6 +21,6 @@ const commentSchema = new Schema({
   },
 });
 
-const Comment = mongoose.model("Comment", commentSchema);
+const User = mongoose.model("User", userSchema);
 
-export default Comment;
+export default User;
