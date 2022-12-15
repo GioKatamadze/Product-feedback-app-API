@@ -145,3 +145,34 @@ paths:
       responses:
         "200":
           description: comment created
+  /reply:
+    post:
+      tags:
+        - Comments
+      requestBody:
+        description: create reply
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                replyingTo:
+                  type: string
+                feedbackId:
+                  type: number
+                userId:
+                  type: number
+                commentId:
+                  type: number
+            example:
+              content: While working for dark mode, there are browser extensions that will also do the job. Search for "dark theme" followed vy your browser. There might be a need to turn off an extension for sites with naturally black backgrounds though.
+              replyingTo: hummingbird1
+              feedbackId: 2
+              userId: 6
+              commentId: 4
+      responses:
+        "200":
+          description: reply created
