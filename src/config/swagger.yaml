@@ -107,3 +107,16 @@ paths:
       responses:
         "200":
           description: feedback created
+  /users:
+    get:
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
