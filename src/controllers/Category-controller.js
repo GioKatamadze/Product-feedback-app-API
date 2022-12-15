@@ -1,6 +1,6 @@
 import Category from "../models/Category.js";
 
-export const getAllCategories = async (req, res) => {
+export const getAllCategories = async (_, res) => {
   const data = await Category.find();
   const newData = data.map((category) => {
     return {
