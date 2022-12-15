@@ -120,3 +120,28 @@ paths:
                 type: array
                 items:
                   type: string
+  /comments:
+    post:
+      tags:
+        - Comments
+      requestBody:
+        description: create comment
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: object
+                feedbackId:
+                  type: number
+                userId:
+                  type: number
+            example:
+              content: Awesome idea! Trying to find framework-specific project within hubs can be tedious
+              feedbackId: 1
+              userId: 2
+      responses:
+        "200":
+          description: comment created
