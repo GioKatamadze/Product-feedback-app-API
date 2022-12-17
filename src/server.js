@@ -1,4 +1,4 @@
-import Express from "express";
+import express from "express";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -11,7 +11,7 @@ import statusRouter from "./routes/Status-router.js";
 import userRouter from "./routes/User-router.js";
 import commentRouter from "./routes/Comment-router.js";
 
-const app = Express();
+const app = express();
 dotenv.config();
 connectToMongo();
 
