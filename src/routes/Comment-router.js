@@ -1,5 +1,5 @@
 import express from "express";
-import { addComment, addReply } from "../controllers/comment-controller.js";
+import { addComment, addReply } from "../controllers/Comment-controller.js";
 
 const commentRouter = express.Router();
 
