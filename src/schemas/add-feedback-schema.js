@@ -5,7 +5,6 @@ const checkCategory = (document) => (value, helpers) => {
   if (!document) {
     return helpers.messages("there is no category with this id");
   }
-
   return value;
 };
 
