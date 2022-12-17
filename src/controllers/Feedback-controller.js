@@ -1,7 +1,6 @@
 import Comment from "../models/Comment.js";
 import Feedback from "../models/Feedback.js";
-import Reply from "../models/Replay.js";
-import Feedback from "../models/Feedback.js";
+import Reply from "../models/Reply.js";
 import addFeedbackSchema from "../schemas/add-feedback-schema.js";
 
 export const getAllFeedbacks = async (_, res) => {
