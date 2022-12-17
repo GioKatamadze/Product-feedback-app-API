@@ -8,8 +8,8 @@ import feedbackRouter from "./routes/Feedback-router.js";
 import swaggerMiddleware from "./middlewares/swagger-middleware.js";
 import categoryRouter from "./routes/Category-router.js";
 import statusRouter from "./routes/Status-router.js";
-import userRouter from "./routes/user-router.js";
-import commentRouter from "./routes/comment-router.js";
+import userRouter from "./routes/User-router.js";
+import commentRouter from "./routes/Comment-router.js";
 
 const app = Express();
 dotenv.config();
