@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-const getAllUsers = async (_, res) => {
+export const getAllUsers = async (_, res) => {
   const data = await User.find();
   const newData = await data.map((user) => {
     return {
@@ -13,5 +13,3 @@ const getAllUsers = async (_, res) => {
 
   return res.json(newData);
 };
-
-export default getAllUsers;
