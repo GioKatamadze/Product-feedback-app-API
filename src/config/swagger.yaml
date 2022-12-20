@@ -120,7 +120,7 @@ paths:
                 type: array
                 items:
                   type: string
-  /comments:
+  /comment:
     post:
       tags:
         - Comments
