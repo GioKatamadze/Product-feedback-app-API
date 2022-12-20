@@ -77,8 +77,8 @@ export const getSingleFeedback = async (req, res) => {
     });
     return {
       content: comment.content,
-      feedbackId: comment.feedbackId,
-      userId: comment.userId,
+      feedbackId: comment.feedback_id,
+      userId: comment.user_id,
       id: comment.id,
       replies: newReplies,
     };
