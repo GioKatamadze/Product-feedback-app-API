@@ -4,6 +4,6 @@ import { addComment, addReply } from "../controllers/Comment-controller.js";
 const commentRouter = express.Router();
 
 commentRouter.post("/comment", addComment);
-commentRouter.post("/replay", addReply);
+commentRouter.post("/reply", addReply);
 
 export default commentRouter;
