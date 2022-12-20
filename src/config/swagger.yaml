@@ -133,7 +133,7 @@ paths:
               type: object
               properties:
                 content:
-                  type: object
+                  type: string
                 feedbackId:
                   type: number
                 userId:
