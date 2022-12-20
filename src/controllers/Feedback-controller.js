@@ -59,7 +59,7 @@ export const getSingleFeedback = async (req, res) => {
       .json({ message: "There is no feedback with this id" });
   }
 
-  const comments = await Comment.find({ feedback_id: +id });
+  const comments = await Comment.find({ feedbackId: +id });
   const allReplies = await Reply.find();
   const newComments = comments.map((comment) => {
     const replies = allReplies.filter(
@@ -77,8 +77,8 @@ export const getSingleFeedback = async (req, res) => {
     });
     return {
       content: comment.content,
-      feedbackId: comment.feedback_id,
-      userId: comment.user_id,
+      feedbackId: comment.userId,
+      userId: comment.userId,
       id: comment.id,
       replies: newReplies,
     };
