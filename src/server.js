@@ -19,11 +19,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use("/images", express.static("public/storage"));
 
-app.use("/api", feedbackRouter);
-app.use("/api", categoryRouter);
-app.use("/api", statusRouter);
-app.use("/api", userRouter);
-app.use("/api", commentRouter);
-app.use("/", ...swaggerMiddleware());
+app.use("/api", cors(), feedbackRouter);
+app.use("/api", cors(), categoryRouter);
+app.use("/api", cors(), statusRouter);
+app.use("/api", cors(), userRouter);
+app.use("/api", cors(), commentRouter);
+app.use("/", cors(), ...swaggerMiddleware());
 
 app.listen(process.env.PORT || 5000);
