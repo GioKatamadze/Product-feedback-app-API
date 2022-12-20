@@ -59,7 +59,7 @@ export const getSingleFeedback = async (req, res) => {
       .json({ message: "There is no feedback with this id" });
   }
 
-  const comments = await Comment.find({ feedbackId: +id });
+  const comments = await Comment.find({ feedback_id: +id });
   const allReplies = await Reply.find();
   const newComments = comments.map((comment) => {
     const replies = allReplies.filter(

@@ -7,11 +7,11 @@ const commentSchema = new Schema({
     type: Schema.Types.String,
     required: true,
   },
-  feedbackId: {
+  feedback_id: {
     type: Schema.Types.Number,
     required: true,
   },
-  userId: {
+  user_id: {
     type: Schema.Types.Number,
     required: true,
   },
