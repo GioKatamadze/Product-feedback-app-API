@@ -12,14 +12,14 @@ export const addComment = async (req, res) => {
   if (error) {
     return res.status(401).json(error.details);
   }
-  const { content, feedback_id, user_id } = data;
+  const { content, feedbackId, userId } = data;
 
   const lastComment = await Comment.find().sort({ _id: -1 }).limit(1);
   const id = lastComment.length > 0 ? lastComment[0].id + 1 : 1;
   const newComment = {
     content,
-    feedback_id,
-    user_id,
+    feedbackId,
+    userId,
     id,
   };
 
