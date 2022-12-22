@@ -2,6 +2,7 @@ import Comment from "../models/Comment.js";
 import Feedback from "../models/Feedback.js";
 import Reply from "../models/Reply.js";
 import addFeedbackSchema from "../schemas/add-feedback-schema.js";
+import updateFeedbackSchema from "../schemas/update-feedback-schema.js";
 
 export const getAllFeedbacks = async (_, res) => {
   const data = await Feedback.find();

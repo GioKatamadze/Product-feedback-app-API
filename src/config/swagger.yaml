@@ -165,11 +165,14 @@ paths:
                   type: number
                 status_id:
                   type: number
+                id:
+                  type: number
             example:
               title: Awesome idea!
               description: Awesome idea! Trying to find framework-specific project within hubs can be tedious
               category_id: 1
               status_id: 2
+              id: 13
       responses:
         "200":
           description: feedback edited
