@@ -24,7 +24,7 @@ export const addComment = async (req, res) => {
   };
 
   await Comment.create({ ...newComment });
-  const feedback = await Feedback.findOne({ id: feedback_id });
+  const feedback = await Feedback.findOne({ id: feedbackId });
   await feedback.update({
     commentAmount: feedback.commentAmount + 1,
   });
