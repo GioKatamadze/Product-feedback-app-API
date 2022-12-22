@@ -8,7 +8,7 @@ This is a solution to the [Product feedback app](https://www.frontendmentor.io/c
 
 - Live Site URL: [Live](https://vocal-paprenjak-6f9f8e.netlify.app/)
 - Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-front)
-- Frontend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-API)
+- Backend URL: [GitHub Code](https://github.com/GioKatamadze/Product-feedback-app-API)
 
 ### The challenge
 
