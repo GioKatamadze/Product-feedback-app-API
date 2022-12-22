@@ -145,6 +145,34 @@ paths:
       responses:
         "200":
           description: comment created
+  /feedback:
+    put:
+      tags:
+        - Feedbacks
+      requestBody:
+        description: edit feedback
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                category_id:
+                  type: number
+                status_id:
+                  type: number
+            example:
+              title: Awesome idea!
+              description: Awesome idea! Trying to find framework-specific project within hubs can be tedious
+              category_id: 1
+              status_id: 2
+      responses:
+        "200":
+          description: feedback edited
   /reply:
     post:
       tags:
